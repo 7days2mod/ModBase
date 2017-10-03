@@ -55,11 +55,15 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
 rmdir "$(ProjectDir)Mods\ModBase" /s /q
 mkdir "$(ProjectDir)Mods\ModBase"
 
 copy "$(ProjectDir)$(OutDir)ModBase.dll" "$(ProjectDir)Mods\ModBase\ModBase.dll"
 copy "$(ProjectDir)$(OutDir)ModInfo.xml" "$(ProjectDir)Mods\ModBase\ModInfo.xml"
-</PreBuildEvent>
+</PostBuildEvent>
   </PropertyGroup>
 </Project>
