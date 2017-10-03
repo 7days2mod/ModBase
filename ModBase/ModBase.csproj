@@ -51,4 +51,13 @@
     <Content Include="ModInfo.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+rmdir "$(ProjectDir)Mods\ModBase" /s /q
+mkdir "$(ProjectDir)Mods\ModBase"
+
+copy "$(ProjectDir)$(OutDir)BCManager.dll" "$(ProjectDir)Mods\ModBase\ModBase.dll"
+copy "$(ProjectDir)$(OutDir)ModInfo.xml" "$(ProjectDir)Mods\ModBase\ModInfo.xml"
+</PreBuildEvent>
+  </PropertyGroup>
 </Project>
