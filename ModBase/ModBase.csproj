@@ -48,7 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModInfo.xml" />
+    <None Include="ModInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -56,7 +58,7 @@
 rmdir "$(ProjectDir)Mods\ModBase" /s /q
 mkdir "$(ProjectDir)Mods\ModBase"
 
-copy "$(ProjectDir)$(OutDir)BCManager.dll" "$(ProjectDir)Mods\ModBase\ModBase.dll"
+copy "$(ProjectDir)$(OutDir)ModBase.dll" "$(ProjectDir)Mods\ModBase\ModBase.dll"
 copy "$(ProjectDir)$(OutDir)ModInfo.xml" "$(ProjectDir)Mods\ModBase\ModInfo.xml"
 </PreBuildEvent>
   </PropertyGroup>

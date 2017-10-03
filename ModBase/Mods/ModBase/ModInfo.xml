@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="ModBase"/>
+    <Description value="Base API Mod Structure"/>
+    <Author value="StompyNZ"/>
+    <Version value="1.0"/>
+    <Website value="https://github.com/7days2mod/ApiModBase"/>
+  </ModInfo>
+</xml>
